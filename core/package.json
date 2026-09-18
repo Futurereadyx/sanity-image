@@ -1,0 +1,47 @@
+{
+  "name": "@frx/sanity-image",
+  "version": "0.1.0",
+  "description": "Framework-agnostic helpers for sharp, responsive Sanity images: URLs, hotspot crops, srcset, LQIP",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@sanity/image-url": "^2.1.1"
+  },
+  "keywords": [
+    "sanity",
+    "image",
+    "responsive",
+    "srcset"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit -p .",
+    "prepublishOnly": "pnpm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Futurereadyx/sanity-image.git",
+    "directory": "core"
+  },
+  "homepage": "https://github.com/Futurereadyx/sanity-image/tree/main/core#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  }
+}

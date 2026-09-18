@@ -1,0 +1,59 @@
+{
+  "name": "@frx/next-sanity-image",
+  "version": "0.1.0",
+  "description": "next/image for Sanity: q=90, hotspot-aware crops, no CDN upscaling, LQIP placeholders, retina-safe srcset",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client-image": {
+      "types": "./dist/client-image.d.ts",
+      "default": "./dist/client-image.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@frx/sanity-image": "workspace:*"
+  },
+  "peerDependencies": {
+    "next": ">=15",
+    "react": ">=19"
+  },
+  "keywords": [
+    "sanity",
+    "next",
+    "image",
+    "responsive"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit -p .",
+    "prepublishOnly": "pnpm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Futurereadyx/sanity-image.git",
+    "directory": "next"
+  },
+  "homepage": "https://github.com/Futurereadyx/sanity-image/tree/main/next#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  }
+}
